@@ -22,6 +22,9 @@ import "react-phoenix"
 // import socket from "./socket"
 
 import Landing from "./components/views/Landing"
+import Dashboard from "./components/views/Dashboard"
+
 window.Components = {
-  Landing
+  Landing,
+  Dashboard
 }

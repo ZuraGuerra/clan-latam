@@ -1,1 +1,1 @@
-<%= react_component("Components.Landing", %{name: "React"}) %>
+<%= react_component("Components.Dashboard", %{name: "React"}) %>

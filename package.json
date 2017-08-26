@@ -11,7 +11,9 @@
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
     "react": "^15.6.1",
-    "react-phoenix": "file:deps/react_phoenix"
+    "react-phoenix": "file:deps/react_phoenix",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.71.5"
   },
   "devDependencies": {
     "babel-brunch": "~6.0.0",
