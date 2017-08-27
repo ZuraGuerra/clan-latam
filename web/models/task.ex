@@ -1,6 +1,8 @@
 defmodule Clan.Task do
   use Clan.Web, :model
 
+  alias Clan.{Task}
+
   @creation_fields [:step_id, :name]
 
   schema "tasks" do
@@ -11,10 +13,10 @@ defmodule Clan.Task do
     timestamps()
   end
 
-  def create(struct, params) do
-    struct
+  def creation(params) do
+    %Task{}
     |> cast(params, @creation_fields)
     |> validate_required(@creation_fields)
-    |> assoc(:step)
+    |> assoc_constraint(:step)
   end
 end

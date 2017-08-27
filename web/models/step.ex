@@ -1,6 +1,8 @@
 defmodule Clan.Step do
   use Clan.Web, :model
 
+  alias Clan.{Step}
+
   @creation_fields [:name]
 
   schema "steps" do
@@ -10,8 +12,8 @@ defmodule Clan.Step do
     timestamps()
   end
 
-  def create(struct, params) do
-    struct
+  def creation(params) do
+    %Step{}
     |> cast(params, @creation_fields)
     |> validate_required(@creation_fields)
   end

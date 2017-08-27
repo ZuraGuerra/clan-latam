@@ -1,6 +1,8 @@
 defmodule Clan.Event do
   use Clan.Web, :model
 
+  alias Clan.{Event}
+
   @creation_fields [:name, :date]
 
   schema "events" do
@@ -11,8 +13,8 @@ defmodule Clan.Event do
     timestamps()
   end
 
-  def create(struct, params) do
-    struct
+  def creation(params) do
+    %Event{}
     |> cast(params, @creation_fields)
     |> validate_required(@creation_fields)
   end

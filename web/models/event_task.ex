@@ -1,6 +1,8 @@
 defmodule Clan.EventTask do
   use Clan.Web, :model
 
+  alias Clan.{EventTask}
+
   @creation_fields [:event_id, :task_id, :is_done]
 
   schema "event_tasks" do
@@ -11,11 +13,11 @@ defmodule Clan.EventTask do
     timestamps()
   end
 
-  def create(struct, params) do
-    struct
+  def creation(params) do
+    %EventTask{}
     |> cast(params, @creation_fields)
     |> validate_required(@creation_fields)
-    |> assoc(:event)
-    |> assoc(:task)
+    |> assoc_constraint(:event)
+    |> assoc_constraint(:task)
   end
 end
