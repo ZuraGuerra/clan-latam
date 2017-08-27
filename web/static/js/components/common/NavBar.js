@@ -3,15 +3,18 @@ import { Menu } from 'semantic-ui-react'
 
 export default class NavBar extends React.Component {
   render() {
-    let state = { activeItem: 'home' }
+    let state = { activeItem: 'Clan LATAM' }
     let handleItemClick = (e, { name }) => this.setState({ activeItem: name })
     const { activeItem } = state
 
     return (
       <Menu inverted>
-        <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-        <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+        <Menu.Item name='Clan LATAM'
+                   active={activeItem === 'Clan LATAM'}
+                   onClick={this.handleItemClick}
+                   href="/dashboard">
+          Clan LATAM
+        </Menu.Item>
       </Menu>
     )
   }
