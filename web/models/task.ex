@@ -3,12 +3,13 @@ defmodule Clan.Task do
 
   alias Clan.{Task}
 
-  @creation_fields [:step_id, :name]
+  @creation_fields [:step_id, :name, :post_slug]
 
   schema "tasks" do
     belongs_to :step, Clan.Step
     has_many :event_tasks, Clan.EventTask
     field :name, :string
+    field :post_slug, :string
 
     timestamps()
   end

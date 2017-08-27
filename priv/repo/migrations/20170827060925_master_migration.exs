@@ -7,9 +7,16 @@ defmodule Clan.Repo.Migrations.CreateTask do
       timestamps()
     end
 
+    create table(:posts) do
+      add :html, :text
+      add :slug, :string
+      timestamps()
+    end
+
     create table(:tasks) do
       add :name, :string
       add :step_id, references(:steps)
+      add :post_slug, :string
       timestamps()
     end
 

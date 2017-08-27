@@ -1,0 +1,58 @@
+<link href="https://cdn.quilljs.com/1.0.4/quill.snow.css" rel="stylesheet">
+
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, "URL", class: "control-label" %>
+    <%= text_input f, :slug, class: "form-control", required: true %>
+    <%= error_tag f, :slug %>
+  </div>
+
+  <div class="form-group">
+    <%= hidden_input f, :html, class: "form-control" %>
+    <%= error_tag f, :html %>
+  </div>
+
+  <%= label f, "Contenido", class: "control-label" %>
+  <div id="editor">
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<script src="https://cdn.quilljs.com/1.0.4/quill.js"></script>
+
+<script type="text/javascript">
+  var quill = new Quill('#editor', {
+    modules: {
+      toolbar: [
+        ['bold', 'italic', 'underline', 'strike'],
+        ['image', 'link', 'blockquote'],
+        [
+          {'size': ['small', false, 'large']},
+          {'header': [1, 2, 3, false]},
+          {'font': []},
+          {'align': []}
+        ],
+        [
+          {'color':[]},
+          {'background':[]}
+        ],
+        ['clean']
+      ]
+    },
+    theme: 'snow'
+  });
+  var htmlField = document.querySelector('input[name="post\[html\]"]');
+  var editor = document.querySelector(".ql-editor");
+  var form = document.querySelector('form');
+  if (htmlField.value) { quill.clipboard.dangerouslyPasteHTML(0, htmlField.value); }
+  form.addEventListener('submit', function (event) { htmlField.value = editor.innerHTML; });
+</script>
