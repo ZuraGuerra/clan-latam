@@ -23,8 +23,10 @@ import "react-phoenix"
 
 import Landing from "./components/views/Landing"
 import Dashboard from "./components/views/Dashboard"
+import NavBar from "./components/common/NavBar"
 
 window.Components = {
   Landing,
-  Dashboard
+  Dashboard,
+  NavBar
 }

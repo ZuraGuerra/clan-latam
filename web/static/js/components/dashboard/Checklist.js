@@ -28,7 +28,6 @@ export default class Checklist extends React.Component {
 
     return (
       <div>
-        {console.log(this.props.data)}
         <Tab panes={formMenu(this.props.data)} onTabChange={this.handleChange} />
       </div>
     )
