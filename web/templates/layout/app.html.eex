@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <header class="header">
-        <%= react_component("Components.NavBar", %{name: "React"}) %>
+        <%= react_component("Components.NavBar") %>
         <span class="logo"></span>
       </header>
 

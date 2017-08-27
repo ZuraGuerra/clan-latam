@@ -16,6 +16,7 @@ defmodule Clan.Router do
   scope "/", Clan do
     pipe_through :browser # Use the default browser stack
 
+    get "/contenido/:slug", PageController, :render_post
     resources "/post", PostController
     get "/:page", PageController, :render_page
   end

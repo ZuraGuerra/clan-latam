@@ -10,4 +10,9 @@ defmodule Clan.PageController do
   end
 
   def render_page(conn, %{"page" => page}), do: conn |> render(page <> ".html")
+
+  def render_post(conn, %{"slug" => slug}) do
+    post = Repo.get_by(Clan.Post, slug: slug)
+    conn |> render("post.html", post: post)
+  end
 end

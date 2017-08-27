@@ -1,16 +1,17 @@
 import React from "react"
-import Checklist from "../dashboard/Checklist"
-import DateTracker from "../dashboard/DateTracker"
+import { Container } from 'semantic-ui-react'
 import ResourceLinks from "../common/ResourceLinks"
 import Agenda from "../common/Agenda"
-import { Progress } from 'semantic-ui-react'
 
-export default class Dashboard extends React.Component {
+export default class Post extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
+    function rawMarkup(post){
+        return { __html: post };
+    }
 
     let contacts = [
       {
@@ -58,15 +59,13 @@ export default class Dashboard extends React.Component {
     ]
 
     return (
-      <div>
-        <Progress percent={this.props.data.progress} progress indicating />
-        <DateTracker daysRemaining={this.props.data.daysRemaining} />
-        <div id="dashboard-content">
-          <Checklist data={this.props.data.menu} />
-          <div id="dashboard-side">
-            <ResourceLinks links={eventLinks} />
-            <Agenda contacts={contacts} />
-          </div>
+      <div id="post-container">
+        <Container text>
+          <span dangerouslySetInnerHTML={rawMarkup(this.props.post)} />
+        </Container>
+        <div id="dashboard-side">
+          <ResourceLinks links={eventLinks} />
+          <Agenda contacts={contacts} />
         </div>
       </div>
     )
