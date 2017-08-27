@@ -19,7 +19,10 @@ export default class Checklist extends React.Component {
 
     function formChecklist(items) {
       return items.map((item) => {
-        return <Item name={item.name} isChecked={item.isChecked} key={item.id}/>
+        return <Item name={item.name}
+                     isChecked={item.isChecked}
+                     key={item.id}
+                     postUrl={item.postUrl} />
       })
     }
 

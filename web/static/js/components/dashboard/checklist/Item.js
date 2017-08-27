@@ -9,7 +9,7 @@ export default class Item extends React.Component {
   render() {
     return (
       <div className="checklist-item">
-        <p>{this.props.name}</p>
+        <a href={this.props.postUrl}>{this.props.name}</a>
         <Checkbox defaultChecked={this.props.isChecked} />
       </div>
     )

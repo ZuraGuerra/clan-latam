@@ -28,7 +28,8 @@ defmodule Clan.DashboardServices do
       %{
         name: item.name,
         isChecked: false, # change later
-        id: item.id
+        id: item.id,
+        postUrl: "/contenido/" <> item.post_slug
       }
     end)
   end
