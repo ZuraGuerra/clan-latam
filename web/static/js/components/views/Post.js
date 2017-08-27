@@ -20,6 +20,14 @@ export default class Post extends React.Component {
         "name": "Eli Becerril",
         "role": "Regional Manager LATAM",
         "email": "eli@sw.org"
+      },
+      ,
+      {
+        "id": 2,
+        "avatar": "http://startupacademy.la/mentors/martin-vivas.jpg",
+        "name": "Martín Vivas",
+        "role": "Facilitador",
+        "email": "martin@sw.org"
       }
     ]
 
@@ -27,27 +35,32 @@ export default class Post extends React.Component {
       {
         "id": 1,
         "name": "Eventbrite",
-        "url": "https://www.eventbrite.com/myevent?eid=32834796761"
+        "url": "https://www.eventbrite.com/myevent?eid=32834796761",
+        "color": "green"
       },
       {
         "name": "SWOOP Admin",
         "url": "http://swoop.techstars.com",
-        "id": 2
+        "id": 2,
+        "color": "black"
       },
       {
         "id": 3,
         "name": "Sitio del evento",
-        "url": "http://swregistro.com"
+        "url": "http://swregistro.com",
+        "color": "orange"
       },
       {
         "id": 4,
         "name": "Drive del evento",
-        "url": "https://drive.google.com/drive/folders/0Byf5L_QEAXQCNHhtWG4zM1dkcG8?usp=sharing"
+        "url": "https://drive.google.com/drive/folders/0Byf5L_QEAXQCNHhtWG4zM1dkcG8?usp=sharing",
+        "color": "google plus"
       },
       {
         "id": 5,
         "name": "Facebook de la comunidad",
-        "url": "https://www.facebook.com/StartupWeekendCDMX/"
+        "url": "https://www.facebook.com/StartupWeekendCDMX/",
+        "color": "facebook"
       }
     ]
 

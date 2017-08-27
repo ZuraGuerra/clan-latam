@@ -6,6 +6,17 @@
   align-items: center;
 }
 
+.checklist-item > a {
+  color: #37880e;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.checklist-item > a:hover {
+  color:#4fc513;
+}
+
 main {
   padding: 2rem 4rem;
 }

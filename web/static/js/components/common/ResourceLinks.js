@@ -9,7 +9,7 @@ export default class ResourceLinks extends React.Component {
   render() {
     function renderLinks(links) {
       return links.map((link) => {
-        return <Button content={link.name} key={link.id} />
+        return <Button content={link.name} color={link.color} key={link.id} />
       })
     }
     return (
