@@ -18,4 +18,9 @@ defmodule Clan.Post do
     struct
     |> cast(params, @creation_fields)
   end
+
+  def creation(params) do
+    %Clan.Post{}
+    |> cast(params, @creation_fields)
+  end
 end
