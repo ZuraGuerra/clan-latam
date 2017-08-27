@@ -9,3 +9,39 @@
 main {
   padding: 2rem 4rem;
 }
+
+#dashboard-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+#dashboard-content {
+  width: 1000px;
+  padding: 2rem;
+}
+
+#dashboard-checklist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dashboard-checklist > div:first-child {
+  width: 1000px;
+  padding: 2rem;
+}
+
+#dashboard-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.ui.vertical.buttons {
+  width: 300px;
+}
+
+div.ui.cards {
+  margin: 2rem auto;
+  width: 200px;
+}

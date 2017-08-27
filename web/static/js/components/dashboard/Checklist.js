@@ -27,7 +27,7 @@ export default class Checklist extends React.Component {
     let handleChange = (e, data) => this.setState(data)
 
     return (
-      <div>
+      <div id="dashboard-checklist">
         <Tab panes={formMenu(this.props.data)} onTabChange={this.handleChange} />
       </div>
     )

@@ -48,12 +48,14 @@ export default class Dashboard extends React.Component {
 
     let contacts = [
       {
+        "id": 1,
         "avatar": "http://myfirstshiba.com/wp-content/uploads/2016/01/AdobeStock_139296191_reduced_white_background-copy.jpg",
         "name": "Eli",
         "role": "RM Latam",
         "email": "eli@sw.org"
       },
       {
+        "id": 2,
         "avatar": "http://myfirstshiba.com/wp-content/uploads/2016/01/AdobeStock_139296191_reduced_white_background-copy.jpg",
         "name": "Shiba",
         "role": "SW Expert",
@@ -95,7 +97,7 @@ export default class Dashboard extends React.Component {
         <DateTracker daysRemaining={data.daysRemaining} />
         <div id="dashboard-content">
           <Checklist data={data.menu} />
-          <div>
+          <div id="dashboard-side">
             <ResourceLinks links={eventLinks} />
             <Agenda contacts={contacts} />
           </div>
