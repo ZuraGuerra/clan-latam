@@ -22,7 +22,8 @@ export default class Checklist extends React.Component {
         return <Item name={item.name}
                      isChecked={item.isChecked}
                      key={item.id}
-                     postUrl={item.postUrl} />
+                     postUrl={item.postUrl}
+                     directLink={item.directLink || nil}/>
       })
     }
 

@@ -25,10 +25,12 @@ defmodule Clan.DashboardServices do
 
   defp form_items(items) do
     Enum.map(items, fn(item) ->
+      post = post_query(item.post_slug) |> Repo.one!
       %{
         name: item.name,
         isChecked: false, # change later
         id: item.id,
+        directUrl: post.direct_link,
         postUrl: "/contenido/" <> item.post_slug
       }
     end)
@@ -38,5 +40,10 @@ defmodule Clan.DashboardServices do
     Clan.Step
     |> order_by(:inserted_at)
     |> preload(:tasks)
+  end
+
+  defp post_query(slug) do
+    Clan.Post
+    |> where([post], post.slug == ^slug)
   end
 end

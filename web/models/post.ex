@@ -1,11 +1,12 @@
 defmodule Clan.Post do
   use Clan.Web, :model
 
-  @creation_fields [:slug, :html]
+  @creation_fields [:slug, :html, :direct_link]
 
   schema "posts" do
     field :html, :string
     field :slug, :string
+    field :direct_link, :string
 
     timestamps()
   end
@@ -16,6 +17,5 @@ defmodule Clan.Post do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, @creation_fields)
-    |> validate_required(@creation_fields)
   end
 end

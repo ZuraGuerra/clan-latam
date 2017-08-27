@@ -10,6 +10,7 @@ defmodule Clan.Repo.Migrations.CreateTask do
     create table(:posts) do
       add :html, :text
       add :slug, :string
+      add :direct_link, :string
       timestamps()
     end
 
