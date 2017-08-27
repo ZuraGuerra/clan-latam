@@ -27,27 +27,27 @@ export default class Post extends React.Component {
       {
         "id": 1,
         "name": "Eventbrite",
-        "url": "eventbrite.com/mi-evento"
+        "url": "https://www.eventbrite.com/myevent?eid=32834796761"
       },
       {
         "name": "SWOOP Admin",
-        "url": "eventbrite.com/mi-evento",
+        "url": "http://swoop.techstars.com",
         "id": 2
       },
       {
         "id": 3,
         "name": "Sitio del evento",
-        "url": "eventbrite.com/mi-evento"
+        "url": "http://swregistro.com"
       },
       {
         "id": 4,
         "name": "Drive del evento",
-        "url": "eventbrite.com/mi-evento"
+        "url": "https://drive.google.com/drive/folders/0Byf5L_QEAXQCNHhtWG4zM1dkcG8?usp=sharing"
       },
       {
         "id": 5,
         "name": "Facebook de la comunidad",
-        "url": "eventbrite.com/mi-evento"
+        "url": "https://www.facebook.com/StartupWeekendCDMX/"
       }
     ]
 
