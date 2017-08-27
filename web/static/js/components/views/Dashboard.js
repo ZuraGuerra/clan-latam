@@ -93,10 +93,10 @@ export default class Dashboard extends React.Component {
 
     return (
       <div>
-        <Progress percent={data.progress} progress indicating />
-        <DateTracker daysRemaining={data.daysRemaining} />
+        <Progress percent={this.props.data.progress} progress indicating />
+        <DateTracker daysRemaining={this.props.data.daysRemaining} />
         <div id="dashboard-content">
-          <Checklist data={data.menu} />
+          <Checklist data={this.props.data.menu} />
           <div id="dashboard-side">
             <ResourceLinks links={eventLinks} />
             <Agenda contacts={contacts} />
