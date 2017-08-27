@@ -25,12 +25,10 @@ defmodule Clan.DashboardServices do
 
   defp form_items(items) do
     Enum.map(items, fn(item) ->
-      post = post_query(item.post_slug) |> Repo.one!
       %{
         name: item.name,
         isChecked: false, # change later
         id: item.id,
-        directUrl: post.direct_link,
         postUrl: "/contenido/" <> item.post_slug
       }
     end)

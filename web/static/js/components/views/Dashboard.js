@@ -8,6 +8,18 @@ import { Progress } from 'semantic-ui-react'
 export default class Dashboard extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      progress: 5
+    }
+    this.onCheckboxChange = this.onCheckboxChange.bind(this);
+  }
+
+  onCheckboxChange() {
+    console.log("HASHFASJFA")
+    this.setState({
+      progress: this.state.progress >= 100 ? 0 : this.state.progress + 1
+    })
+    console.log(this.state)
   }
 
   render() {
@@ -50,12 +62,16 @@ export default class Dashboard extends React.Component {
       }
     ]
 
+    let progress = 5
+
     return (
       <div>
-        <Progress percent={this.props.data.progress} progress indicating />
+        <Progress percent={this.state.progress} progress indicating />
         <DateTracker daysRemaining={this.props.data.daysRemaining} />
         <div id="dashboard-content">
-          <Checklist data={this.props.data.menu} />
+          <Checklist data={this.props.data.menu}
+                     onCheckboxChange={this.onCheckboxChange}
+                     progress={this.state.progress}/>
           <div id="dashboard-side">
             <ResourceLinks links={eventLinks} />
             <Agenda contacts={contacts} />

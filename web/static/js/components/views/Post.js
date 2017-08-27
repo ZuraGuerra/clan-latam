@@ -16,17 +16,10 @@ export default class Post extends React.Component {
     let contacts = [
       {
         "id": 1,
-        "avatar": "http://myfirstshiba.com/wp-content/uploads/2016/01/AdobeStock_139296191_reduced_white_background-copy.jpg",
-        "name": "Eli",
-        "role": "RM Latam",
+        "avatar": "https://scontent.fmex7-2.fna.fbcdn.net/v/t1.0-9/19029449_10155587909394728_2348935550756153236_n.jpg?oh=9cccac59e2f87fa7bc8ed615b0be8dad&oe=5A5CA333",
+        "name": "Eli Becerril",
+        "role": "Regional Manager LATAM",
         "email": "eli@sw.org"
-      },
-      {
-        "id": 2,
-        "avatar": "http://myfirstshiba.com/wp-content/uploads/2016/01/AdobeStock_139296191_reduced_white_background-copy.jpg",
-        "name": "Shiba",
-        "role": "SW Expert",
-        "email": "shiba@sw.org"
       }
     ]
 
