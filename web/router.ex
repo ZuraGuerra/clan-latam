@@ -20,7 +20,10 @@ defmodule Clan.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Clan do
-  #   pipe_through :api
-  # end
+  scope "/api", Clan do
+    pipe_through :api
+
+    post "/:entity_name", MasterController, :create
+    post "/:entity_name/:action/", MasterController, :modify
+  end
 end
