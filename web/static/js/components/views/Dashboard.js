@@ -78,6 +78,7 @@ export default class Dashboard extends React.Component {
 
     return (
       <div>
+        <h1>Startup Weekend: Back 2 Basics</h1>
         <Progress percent={this.state.progress} progress indicating />
         <DateTracker daysRemaining={this.props.data.daysRemaining} />
         <div id="dashboard-content">

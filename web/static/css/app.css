@@ -13,6 +13,13 @@
   padding: 0.5rem;
 }
 
+h1 {
+  text-align: center;
+  color: #21ba45;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
 .checklist-item > a:hover {
   color:#4fc513;
 }
